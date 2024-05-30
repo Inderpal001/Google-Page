@@ -1,14 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: arial, sans-serif;
-  line-height: 1.58;
-}
-
 $blueColor: #681da8;
 $fontColor :rgb(77, 81, 86);
 $borderColor :#ecedef;
+$fontFamily: arial, sans-serif;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontFamily;
+  line-height: 1.58;
+}
 
 @mixin flex {
   display: flex;
@@ -21,12 +22,12 @@ $borderColor :#ecedef;
   align-items: center;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   visibility: hidden;
 }
 
-@mixin underLine{
-  &:hover{
+@mixin underLine {
+  &:hover {
     text-decoration: underline;
   }
 }

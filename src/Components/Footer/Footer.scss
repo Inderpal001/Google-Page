@@ -1,15 +1,15 @@
-@import "../../globe";
+@import "../../global";
 
-.footer{
+.footer {
     @include flex;
     background: #d7d6d6;
     padding: 10px 20px;
     color: $fontColor;
     font-size: 14px;
 
-    p{
+    p {
         margin-left: 15rem;
-        b{
+        b {
             margin-left: 10px;
         }
     }
@@ -17,11 +17,11 @@
    
 }
 
-@media screen and (max-width:1000px){
-    .footer{
+@media screen and (max-width:1000px) {
+    .footer {
         text-align: center;
         font-size: 14px;
-        p{
+        p {
             margin-left: 0;
             text-align: center;
         }
@@ -29,10 +29,10 @@
 }
 
 
-@media screen and (max-width:650px){
-    .footer{
+@media screen and (max-width:650px)  {
+    .footer {
         font-size: 11px;
-        p{
+        p {
             margin: 0;
             text-align: center;
         }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { IoMdSearch } from "react-icons/io";
-import "./Searches.scss";
+import "./Search.scss";
 
-export default function Searches({searchItem}) {
+export default function Search({searchItem}) {
   return (
     <div className='searches'> <IoMdSearch /> <p>{searchItem}</p></div>
   )

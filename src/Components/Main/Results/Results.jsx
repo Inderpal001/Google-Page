@@ -4,7 +4,7 @@ import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import "./Results.scss";
 import { RxCountdownTimer } from "react-icons/rx";
 import DescBox from "../DescBox/DescBox";
-import Searches from "./Searches/Searches";
+import Search from "./Search/Search";
 
 export default function () {
   const data = [
@@ -215,18 +215,18 @@ export default function () {
                 {val.siteDescBox && (
                   <div className="desc-row-container">
                     <div className="row">
-                    {" "}
-                    {val.siteDescBox.map((desc, index) => {
-                      return (
-                        <DescBox
-                          key={index}
-                          siteDescBoxText={desc.siteDescBoxText}
-                          siteDescBoxImage={desc.siteDescBoxImage}
-                          siteDescBoxTime={desc.siteDescBoxTime}
-                        />
-                      );
-                    })}{" "}
-                  </div>
+                      {" "}
+                      {val.siteDescBox.map((desc, index) => {
+                        return (
+                          <DescBox
+                            key={index}
+                            siteDescBoxText={desc.siteDescBoxText}
+                            siteDescBoxImage={desc.siteDescBoxImage}
+                            siteDescBoxTime={desc.siteDescBoxTime}
+                          />
+                        );
+                      })}{" "}
+                    </div>
                   </div>
                 )}
                 <p className="result-desc-desc">{val.siteDesc}</p>
@@ -273,7 +273,7 @@ export default function () {
                 </div>
                 <div className="searchesGrid">
                   {val.relatedSearch.map((item, i) => {
-                    return <Searches key={i} searchItem={item.search} />;
+                    return <Search key={i} searchItem={item.search} />;
                   })}
                 </div>
               </div>

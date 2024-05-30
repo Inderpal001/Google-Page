@@ -1,62 +1,61 @@
-@import "../../globe";
+@import "../../global";
 
-.main{
+.main {
     width: 80%;
     margin: auto;
     padding: 1.1rem 2.2rem;
     display: flex;
 
-    .left-main{
+    .left-main {
         flex: 1;
         color: $fontColor;
     }
-    .right-main{
+    .right-main {
         flex: 1;
 
-        .info{
+        .info {
             margin-left: 40px;
             max-width: 400px;
             border: 1px solid $borderColor;
             border-radius: 8px;
 
-            .info-title{
+            .info-title {
                 @include flex;
                 justify-content: space-between;
                 padding: 7px 15px;
                 border-bottom: 1px solid $borderColor;
 
-                div{
-                    h2{
+                div {
+                    h2 {
                         font-weight: 500;
                         font-size: 28px;
-                        font-family:Google Sans,arial,sans-serif-medium,sans-serif;
                     }
-                    p{
+                    p {
                         font-size: 13px;
                         color: $fontColor;
                     }
                 }
             }
 
-            .info-site{
+            .info-site {
                 padding: 8px 13px;
                 @include flex;
                 border-bottom: 1px solid $borderColor;
                 gap: 25px;
 
-                svg{
+                svg {
                     color: $fontColor;
                 }
 
-                .google{
+                .google {
                     color: $blueColor;
                     font-size: 14px;
                     @include underLine;
                 }
             }
 
-            .info-desc{
-                .info-desc-sm{
+            .info-desc {
+                .info-desc-sm {
                     padding: 10px 15px;
                     display: flex;
                     flex-direction: column;
@@ -65,14 +64,14 @@
                     position: relative;
                     margin-bottom: 20px;
 
-                    p{
+                    p {
                         font-size: 15px;
-                        span{
+                        span {
                             color: $blueColor;
                         }
                     }
 
-                    i{
+                    i {
                         position: absolute;
                         right: 10px;
                         bottom: -20px;
@@ -81,38 +80,40 @@
                     }
                 }
 
-                .sites{
+                .sites {
                     padding: 10px 15px;
 
-                    .viewMore{
+                    .viewMore {
                         @include flex;
                         justify-content: space-between;
                         color: $fontColor;
                         font-size: 14px;
                     }
 
-                    div{
+                    div {
                         .site-Profile{
                             font-size: 20px;
                             font-weight: 400;
                         }
                     }
-                    div.sites-info{
+
+                    div.sites-info {
                         margin-top: 8px;
                         display: flex;
                         flex-direction: row;
                         justify-content: space-evenly;
 
-                        div{
+                        div {
                             
-                           svg{
+                           svg {
                                 font-size: 40px;
                            }
 
-                           .downSite{
+                           .downSite {
                             font-size: 55px;
                            }
-                           p{
+
+                           p {
                             font-size: 14px;
                             color: $blueColor;
                            }
@@ -120,10 +121,10 @@
                     }
                 }
 
-                #site{
+                #site {
                     position: relative;
 
-                    .feedback{
+                    .feedback {
                         position: absolute;
                         right: 10px;
                         bottom: -25px;
@@ -137,18 +138,18 @@
 }
 
 @media screen and (max-width:1025px) {
-    .main{
+    .main {
         width:95%;
         flex-direction: column;
 
-        .right-main{
+        .right-main {
             display: none;
         }
     }
 }
 
 @media screen and (max-width:768px) {
-    .main{
+    .main {
         width:90%;
         padding: 15px 5px;
         margin: auto;

@@ -1,4 +1,4 @@
-@import "../../globe";
+@import "../../global";
 
 .navbar {
   width: 100%;
@@ -62,7 +62,7 @@
     gap: 4rem;
     max-width: 74%;
     justify-content: space-between;
-    .flex{
+    .flex {
       @include flex;
       margin-top: 8px;
       margin-left: 130px;
@@ -78,12 +78,12 @@
       }
     }
 
-    div{
-      p{
+    div {
+      p {
         margin-top: 17px;
         font-size: 14px;
 
-        .line{
+        .line {
           transform: rotate(90deg);
           margin-bottom: -2px;
         }
@@ -102,7 +102,7 @@
       }
     }
 
-    .lower-Navbar{
+    .lower-Navbar {
       max-width: 100%;
     }
   }
@@ -122,7 +122,7 @@
       justify-content: unset;
       overflow-x: scroll;
 
-      .flex{
+      .flex {
         margin-left: 0px;
       }
     }
@@ -131,8 +131,8 @@
 
 @media screen and (max-width: 800px) {
   .navbar {
-    .lower-Navbar{
-        div.tools{
+    .lower-Navbar {
+        div.tools {
           display: none;
         }
     }

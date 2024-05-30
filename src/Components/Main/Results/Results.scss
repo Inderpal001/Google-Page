@@ -1,4 +1,4 @@
-@import "../../../globe";
+@import "../../../global";
 
 .result {
   margin-bottom: 20px;
@@ -21,7 +21,7 @@
     .site-name {
       font-size: 12px;
 
-      .threeDot{
+      .threeDot {
         margin-left: 7px;
       }
     }
@@ -36,7 +36,7 @@
       font-size: 20px;
     }
 
-    .row{
+    .row {
      display: flex;
      margin-top: 12px;
      gap: 18px;
@@ -47,7 +47,7 @@
       font-size: 14px;
       font-weight: 300;
     }
-    .links{
+    .links {
       font-size: 14px;
       font-weight: 500;
       color: $blueColor;
@@ -71,7 +71,7 @@
           font-weight: 300;
         }
       }
-      div.timer{
+      div.timer {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -83,7 +83,7 @@
         }
       }
 
-      .more{
+      .more {
         font-size: 14px;
         color: $blueColor;
         margin-bottom: 10px;
@@ -92,23 +92,23 @@
   }
 }
 
-.relatedSearch{
+.relatedSearch {
   margin-bottom: 20px;
-  .searchTitle{
+  .searchTitle {
     @include flex;
 
-    h1{
+    h1 {
       font-size: 22px;
       font-weight: 400;
       color: black;
     }
 
-    .threeDot{
+    .threeDot {
       margin-left: 14px;
       font-size: 14px;
     }
   }
-  .searchesGrid{
+  .searchesGrid {
     width: 90%;
     display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -119,8 +119,8 @@
 }
 
 @media screen and (max-width:1300px) {
-   .relatedSearch{
-    .searchesGrid{
+   .relatedSearch {
+    .searchesGrid {
       width: 100%;
     }
    }
@@ -168,15 +168,11 @@
     }
   }
   
-  .relatedSearch{
-    .searchesGrid{
+  .relatedSearch {
+    .searchesGrid {
       row-gap: 9px;
       column-gap: 10px;
     }
-  }
-
-  
-
- 
+  } 
 }
 

@@ -1,6 +1,6 @@
-@import "../../../globe";
+@import "../../../global";
 
-.descBox{
+.descBox {
     border: 1px solid $borderColor;
     display: inline-flex;
     flex-direction: column;
@@ -10,15 +10,15 @@
     min-width: 204px;
     overflow: hidden;
 
-    .descInfo{
+    .descInfo {
         p{
             font-size: 14px;
             padding: 2px 13px 0px 14px;
         }
     }
 
-    .posted{
-        p{
+    .posted {
+        p {
             font-size: 14px;
             padding-left: 12px;
             padding-bottom: 10px;
