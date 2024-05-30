@@ -1,0 +1,182 @@
+@import "../../../globe";
+
+.result {
+  margin-bottom: 20px;
+  .result-title {
+    @include flex;
+
+    .img-div {
+      @include flex-center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: rgb(240, 240, 240);
+      margin-right: 13px;
+
+      img {
+        width: 25px;
+      }
+    }
+
+    .site-name {
+      font-size: 12px;
+
+      .threeDot{
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .result-desc {
+    .result-desc-title {
+      @include underLine;
+      margin-top: 9px;
+      color: $blueColor;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .row{
+     display: flex;
+     margin-top: 12px;
+     gap: 18px;
+     overflow-x: auto;
+    }
+
+    .result-desc-desc {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    .links{
+      font-size: 14px;
+      font-weight: 500;
+      color: $blueColor;
+    }
+  }
+
+  .moreResults {
+    @include flex;
+    margin-left: 25px;
+    gap: 15px;
+      div {
+        .moreResultTitle {
+          @include underLine;
+          margin-top: 9px;
+          color: $blueColor;
+          font-weight: 500;
+          font-size: 20px;
+        }
+        .moreResultDesc{
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+      div.timer{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include flex-center;
+        border: 1px solid $borderColor;
+
+        svg{
+          color: blue;
+        }
+      }
+
+      .more{
+        font-size: 14px;
+        color: $blueColor;
+        margin-bottom: 10px;
+        @include underLine;
+      }
+  }
+}
+
+.relatedSearch{
+  margin-bottom: 20px;
+  .searchTitle{
+    @include flex;
+
+    h1{
+      font-size: 22px;
+      font-weight: 400;
+      color: black;
+    }
+
+    .threeDot{
+      margin-left: 14px;
+      font-size: 14px;
+    }
+  }
+  .searchesGrid{
+    width: 90%;
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 12px;
+      column-gap: 25px;
+      margin-top: 12px;
+  }
+}
+
+@media screen and (max-width:1300px) {
+   .relatedSearch{
+    .searchesGrid{
+      width: 100%;
+    }
+   }
+}
+
+
+@media screen and (max-width: 650px) {
+  .result {
+    margin-bottom: 18px;
+
+    .moreResults {
+      margin-left: 0px;
+  
+      div {
+        .moreResultTitle {
+          font-size: 19px;
+        }
+  
+        .moreResultDesc {
+          font-size: 12px;
+        }
+      }
+  
+      div.timer {
+        display: none;
+      }
+    }
+
+    .result-desc {
+      .row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 18px;
+        overflow-x: auto;
+        margin-top: 12px;
+      }
+      
+      .result-desc-title {
+        font-size: 19px;
+      }
+      
+      .result-desc-desc {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .relatedSearch{
+    .searchesGrid{
+      row-gap: 9px;
+      column-gap: 10px;
+    }
+  }
+
+  
+
+ 
+}
+

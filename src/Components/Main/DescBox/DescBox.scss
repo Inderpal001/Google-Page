@@ -1,0 +1,30 @@
+@import "../../../globe";
+
+.descBox{
+    border: 1px solid $borderColor;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    min-height: 350px;
+    min-width: 204px;
+    overflow: hidden;
+
+    .descInfo{
+        p{
+            font-size: 14px;
+            padding: 2px 13px 0px 14px;
+        }
+    }
+
+    .posted{
+        p{
+            font-size: 14px;
+            padding-left: 12px;
+            padding-bottom: 10px;
+            .time{
+                color: $fontColor;
+            }
+        }
+    }
+}

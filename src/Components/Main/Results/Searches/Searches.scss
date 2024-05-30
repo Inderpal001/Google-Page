@@ -1,0 +1,31 @@
+@import "../../../../globe";
+
+.searches{
+    @include flex;
+    background-color: #f1f3f4;
+    border-radius: 30px;
+    gap: 15px;
+    padding: 10px 25px;
+    max-width: 90%;
+
+    svg{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 16px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+@media screen and (max-width:760px){
+
+    .searches{
+        padding: 8px 16px;
+        max-width: unset;
+        p{
+            font-size: 12px;
+        }
+    }
+}

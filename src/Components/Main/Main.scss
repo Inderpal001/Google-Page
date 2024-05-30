@@ -1,0 +1,156 @@
+@import "../../globe";
+
+.main{
+    width: 80%;
+    margin: auto;
+    padding: 1.1rem 2.2rem;
+    display: flex;
+
+    .left-main{
+        flex: 1;
+        color: $fontColor;
+    }
+    .right-main{
+        flex: 1;
+
+        .info{
+            margin-left: 40px;
+            max-width: 400px;
+            border: 1px solid $borderColor;
+            border-radius: 8px;
+
+            .info-title{
+                @include flex;
+                justify-content: space-between;
+                padding: 7px 15px;
+                border-bottom: 1px solid $borderColor;
+
+                div{
+                    h2{
+                        font-weight: 500;
+                        font-size: 28px;
+                        font-family:Google Sans,arial,sans-serif-medium,sans-serif;
+                    }
+                    p{
+                        font-size: 13px;
+                        color: $fontColor;
+                    }
+                }
+            }
+
+            .info-site{
+                padding: 8px 13px;
+                @include flex;
+                border-bottom: 1px solid $borderColor;
+                gap: 25px;
+
+                svg{
+                    color: $fontColor;
+                }
+
+                .google{
+                    color: $blueColor;
+                    font-size: 14px;
+                    @include underLine;
+                }
+            }
+
+            .info-desc{
+                .info-desc-sm{
+                    padding: 10px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap:5px;
+                    color: $fontColor;
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    p{
+                        font-size: 15px;
+                        span{
+                            color: $blueColor;
+                        }
+                    }
+
+                    i{
+                        position: absolute;
+                        right: 10px;
+                        bottom: -20px;
+                        font-size: 12px;
+                        color: $fontColor;
+                    }
+                }
+
+                .sites{
+                    padding: 10px 15px;
+
+                    .viewMore{
+                        @include flex;
+                        justify-content: space-between;
+                        color: $fontColor;
+                        font-size: 14px;
+                    }
+
+                    div{
+                        .site-Profile{
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                    div.sites-info{
+                        margin-top: 8px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+
+                        div{
+                            
+                           svg{
+                                font-size: 40px;
+                           }
+
+                           .downSite{
+                            font-size: 55px;
+                           }
+                           p{
+                            font-size: 14px;
+                            color: $blueColor;
+                           }
+                        }
+                    }
+                }
+
+                #site{
+                    position: relative;
+
+                    .feedback{
+                        position: absolute;
+                        right: 10px;
+                        bottom: -25px;
+                        font-size: 12px;
+                        color: $fontColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1025px) {
+    .main{
+        width:95%;
+        flex-direction: column;
+
+        .right-main{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main{
+        width:90%;
+        padding: 15px 5px;
+        margin: auto;
+    }
+}

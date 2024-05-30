@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  line-height: 1.58;
+}
+
+$blueColor: #681da8;
+$fontColor :rgb(77, 81, 86);
+$borderColor :#ecedef;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar{
+  visibility: hidden;
+}
+
+@mixin underLine{
+  &:hover{
+    text-decoration: underline;
+  }
+}
