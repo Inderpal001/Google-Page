@@ -1,14 +1,16 @@
 import React from 'react'
-import Navbar from './Components/Navbar/Navbar';
-import Main from './Components/Main/Main';
-import Footer from './Components/Footer/Footer';
+import SearchPage from './Pages/SearchPage';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import HomePage from "./Pages/HomePage";
 
 export default function App() {
+
   return (
-    <div>
-      <Navbar/>
-      <Main/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/search" element={<SearchPage/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }

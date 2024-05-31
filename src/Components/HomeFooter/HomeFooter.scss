@@ -1,0 +1,58 @@
+@import "../../global";
+
+.home-footer {
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  background: $footerColor;
+  color: $footerFontColor;
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    height: auto;
+  }
+
+  .upper-footer {
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(195, 193, 193);
+    @media screen and (max-width: 768px) {
+      padding: 8px 10px;
+    }
+    .footer-links {
+      text-decoration: none;
+      color: $footerFontColor;
+    }
+  }
+
+  .lower-footer {
+    width: 100%;
+    @include flex;
+    padding: 15px 20px;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      flex-direction: column;
+      padding: 8px 10px;
+      gap: 8px;
+    }
+
+    .left-lower-footer,
+    .right-lower-footer {
+      @include flex;
+      gap: 20px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer-links {
+        text-decoration: none;
+        color: $footerFontColor;
+      }
+    }
+  }
+}

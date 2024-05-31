@@ -5,35 +5,101 @@
   padding: 1rem 3rem;
   color: $fontColor;
   border-bottom: 1px solid $borderColor;
+  @media screen and (max-width: 650px) {
+    padding: 13px 20px 5px 20px;
+  }
 
   .upper-Navbar {
     @include flex;
     justify-content: space-between;
+    @media screen and (max-width: 650px) {
+      display: block;
+      margin-bottom: 5px;
+    }
 
     .left-upper-nav {
       @include flex;
       gap: 30px;
+      @media screen and (max-width: 760px) {
+        gap: 20px;
+      }
+      @media screen and (max-width: 650px) {
+        flex-direction: column;
+        gap: 5px;
+      }
 
       .logo {
         width: 100px;
+        @media screen and (max-width: 760px) {
+          width: 80px;
+        }
+        @media screen and (max-width: 650px) {
+          width: 70px;
+        }
       }
 
-      .search-input {
+      .search-input-div {
         @include flex;
         gap: 10px;
         width: 43rem;
         border-radius: 40px;
         padding: 10px 20px;
+        position: relative;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          &:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 8px;
+          }
+        @media screen and (max-width: 1200px) {
+          width: 35rem;
+        }
+        @media screen and (max-width: 980px) {
+          width: 30rem;
+        }
+        @media screen and (max-width: 760px) {
+          padding: 9px 18px;
+        }
+        @media screen and (max-width: 650px) {
+          width: 90%;
+          padding: 9px 18px;
+        }
 
-        input {
+        .search-icon{
+          color: #4285f4;
+          font-size: 20px;
+        }
+
+        .search-icon.left-icon {
+          display: none; 
+          position: absolute;
+          left: 16px;
+          top : 16px;
+        }
+
+        .search-input {
           flex: 1;
           border: none;
           outline: none;
+          padding: 4px;
+          font-size: 14px;
         }
 
-        & > img {
+        .search-input:focus{
+          margin-left: 32px;
+        }
+
+        .search-input:focus ~ .search-icon.right-icon {
+          display: none; 
+        }
+        
+        .search-input:focus ~ .search-icon.left-icon {
+          display: inline-block; 
+        }
+
+        .search-input-img {
           width: 31px;
+          @media screen and (max-width: 650px) {
+            width: 20px;
+          }
         }
       }
     }
@@ -41,6 +107,9 @@
     .right-upper-nav {
       @include flex;
       gap: 20px;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
 
       .apps {
         font-size: 20px;
@@ -62,155 +131,69 @@
     gap: 4rem;
     max-width: 74%;
     justify-content: space-between;
+    margin-top: 5px;
+    @media screen and (max-width: 1200px) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 980px) {
+      justify-content: unset;
+      overflow-x: auto;
+    }
+    @media screen and (max-width: 760px) {
+      overflow: scroll;
+      margin-left: 5px;
+      margin-top: 15px;
+    }
+
     .flex {
       @include flex;
       margin-top: 8px;
       margin-left: 130px;
       gap: 7px;
-  
+      @media screen and (max-width:1100px){
+        margin-left: 10px;
+      }
+      @media screen and (max-width: 980px) {
+        margin-left: 0;
+      }
+
       .navList {
+        text-decoration: none;
         border: 1px solid rgb(212, 212, 212);
         min-width: 38px;
         border-radius: 22px;
         padding: 5px 10px;
         color: rgb(62, 62, 62);
         font-size: 14px;
+        min-width: 70px;
+        text-align: center;
+        @media screen and (max-width: 760px) {
+          font-size: 12px;
+          padding: 4px 15px;
+        }
       }
     }
 
-    div {
-      p {
+    .tools {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+      .filter {
         margin-top: 17px;
         font-size: 14px;
+
+        .selection {
+          border: none;
+          font-size: 14px;
+          color: $fontColor;
+          padding: 8px 0px;
+        }
 
         .line {
           transform: rotate(90deg);
           margin-bottom: -2px;
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .navbar {
-    .upper-Navbar {
-      .left-upper-nav {
-        .search-input {
-          width: 35rem;
-        }
-      }
-    }
-
-    .lower-Navbar {
-      max-width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .navbar {
-    .upper-Navbar {
-      .left-upper-nav {
-        .search-input {
-          width: 30rem;
-        }
-      }
-    }
-
-    .lower-Navbar {
-      justify-content: unset;
-      overflow-x: scroll;
-
-      .flex {
-        margin-left: 0px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .navbar {
-    .lower-Navbar {
-        div.tools {
-          display: none;
-        }
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .navbar {
-    .upper-Navbar {
-      .right-upper-nav {
-        display: none;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .navbar {
-    .upper-Navbar {
-      .left-upper-nav {
-        gap: 20px;
-        .logo {
-          width: 80px;
-        }
-
-        .search-input {
-          padding: 9px 18px;
-        }
-      }
-    }
-
-    .lower-Navbar {
-      overflow: scroll;
-      margin-left: 5px;
-      margin-top: 15px;
-
-      .navList {
-        font-size: 12px;
-        padding: 4px 15px;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .navbar {
-    padding: 13px 20px;
-    .upper-Navbar {
-      display: block;
-      margin-bottom: 5px;
-      .left-upper-nav {
-        flex-direction: column;
-        gap: 5px;
-        .logo {
-          width: 70px;
-        }
-
-        .search-input {
-          width: 90%;
-          padding: 9px 18px;
-
-          & > img {
-            width: 20px;
-          }
-        }
-      }
-    }
-
-    .lower-Navbar {
-        display: none;
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
     }
   }
 }

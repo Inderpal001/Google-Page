@@ -5,6 +5,15 @@
     margin: auto;
     padding: 1.1rem 2.2rem;
     display: flex;
+    @media screen and (max-width:1025px){
+        width:95%;
+        flex-direction: column;
+    };
+    @media screen and (max-width:768px){
+        width:90%;
+        padding: 15px 5px;
+        margin: auto;
+    }
 
     .left-main {
         flex: 1;
@@ -12,6 +21,9 @@
     }
     .right-main {
         flex: 1;
+        @media screen and (max-width:1025px){
+            display: none;
+        }
 
         .info {
             margin-left: 40px;
@@ -25,15 +37,14 @@
                 padding: 7px 15px;
                 border-bottom: 1px solid $borderColor;
 
-                div {
-                    h2 {
-                        font-weight: 500;
-                        font-size: 28px;
-                    }
-                    p {
-                        font-size: 13px;
-                        color: $fontColor;
-                    }
+                .info-title-name {
+                    font-weight: 500;
+                    font-size: 28px;
+                }
+
+                .info-title-company {
+                    font-size: 13px;
+                    color: $fontColor;
                 }
             }
 
@@ -43,12 +54,13 @@
                 border-bottom: 1px solid $borderColor;
                 gap: 25px;
 
-                svg {
+                .earth-svg {
                     color: $fontColor;
                 }
 
                 .google {
                     color: $blueColor;
+                    text-decoration: none;
                     font-size: 14px;
                     @include underLine;
                 }
@@ -64,58 +76,60 @@
                     position: relative;
                     margin-bottom: 20px;
 
-                    p {
+                    .all-info {
                         font-size: 15px;
-                        span {
+
+                        .details {
                             color: $blueColor;
+                            text-decoration: none;
+                            @include underLine;
                         }
                     }
 
-                    i {
+                    .disclaimer {
                         position: absolute;
                         right: 10px;
                         bottom: -20px;
                         font-size: 12px;
                         color: $fontColor;
+
+                        .disclaimer-name{
+                            text-decoration: none;
+                            color: $fontColor;
+                        }
                     }
                 }
 
                 .sites {
                     padding: 10px 15px;
 
-                    .viewMore {
-                        @include flex;
-                        justify-content: space-between;
-                        color: $fontColor;
-                        font-size: 14px;
+                    .site-profiles {
+                        font-size: 20px;
+                        font-weight: 400;
                     }
 
-                    div {
-                        .site-Profile{
-                            font-size: 20px;
-                            font-weight: 400;
-                        }
-                    }
-
-                    div.sites-info {
+                    .sites-info {
                         margin-top: 8px;
                         display: flex;
                         flex-direction: row;
                         justify-content: space-evenly;
 
-                        div {
-                            
-                           svg {
+                        .site-info-div{
+                            @include flex-center;
+                            flex-direction: column;
+
+                            .site-svg {
                                 font-size: 40px;
                            }
-
-                           .downSite {
+    
+                           .down-site-svg {
                             font-size: 55px;
                            }
-
-                           p {
+    
+                           .site-names {
                             font-size: 14px;
                             color: $blueColor;
+                            text-decoration: none;
                            }
                         }
                     }
@@ -123,6 +137,23 @@
 
                 #site {
                     position: relative;
+
+                    .view-more {
+                        @include flex;
+                        justify-content: space-between;
+                        color: $fontColor;
+                        font-size: 14px;
+
+                        .site-searches{
+                            font-size: 20px;
+                            font-weight: 400;
+                        }
+
+                        .view-more-sites{
+                            text-decoration: none;
+                            color: $fontColor;
+                        }
+                    }
 
                     .feedback {
                         position: absolute;
@@ -134,24 +165,5 @@
                 }
             }
         }
-    }
-}
-
-@media screen and (max-width:1025px) {
-    .main {
-        width:95%;
-        flex-direction: column;
-
-        .right-main {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width:768px) {
-    .main {
-        width:90%;
-        padding: 15px 5px;
-        margin: auto;
     }
 }

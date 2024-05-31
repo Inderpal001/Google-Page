@@ -6,35 +6,26 @@
     padding: 10px 20px;
     color: $fontColor;
     font-size: 14px;
-
-    p {
-        margin-left: 15rem;
-        b {
-            margin-left: 10px;
-        }
-    }
-
-   
-}
-
-@media screen and (max-width:1000px) {
-    .footer {
+    @media screen and (max-width:1000px){
         text-align: center;
         font-size: 14px;
-        p {
+    };
+    @media screen and (max-width:650px) {
+        font-size: 11px;
+    }
+
+    .footer-text {
+        margin-left: 15rem;
+        @media screen and (max-width:1000px){
             margin-left: 0;
             text-align: center;
         }
-    }
-}
-
-
-@media screen and (max-width:650px)  {
-    .footer {
-        font-size: 11px;
-        p {
+        @media screen and (max-width:650px) {
             margin: 0;
             text-align: center;
+        }
+        .bold {
+            margin-left: 10px;
         }
     }
 }

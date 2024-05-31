@@ -2,6 +2,10 @@
 
 .result {
   margin-bottom: 20px;
+  @media screen and (max-width: 650px){
+    margin-bottom: 18px;
+  };
+
   .result-title {
     @include flex;
 
@@ -13,7 +17,7 @@
       background-color: rgb(240, 240, 240);
       margin-right: 13px;
 
-      img {
+      .site-img {
         width: 25px;
       }
     }
@@ -21,7 +25,12 @@
     .site-name {
       font-size: 12px;
 
-      .threeDot {
+      .site-link{
+        text-decoration: none;
+        color: $fontColor;
+      }
+
+      .site-link-three-dot {
         margin-left: 7px;
       }
     }
@@ -29,11 +38,15 @@
 
   .result-desc {
     .result-desc-title {
+      text-decoration: none;
       @include underLine;
       margin-top: 9px;
       color: $blueColor;
       font-weight: 500;
       font-size: 20px;
+      @media screen and (max-width: 650px){
+        font-size: 19px;
+      }
     }
 
     .row {
@@ -41,12 +54,23 @@
      margin-top: 12px;
      gap: 18px;
      overflow-x: auto;
+     @media screen and (max-width: 650px){
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 18px;
+      overflow-x: auto;
+      margin-top: 12px;
+     }
     }
 
     .result-desc-desc {
       font-size: 14px;
       font-weight: 300;
+      @media screen and (max-width: 650px){
+        font-size: 12px;
+      }
     }
+
     .links {
       font-size: 14px;
       font-weight: 500;
@@ -54,32 +78,47 @@
     }
   }
 
-  .moreResults {
+  .more-results {
     @include flex;
+    margin-top: 5px;
     margin-left: 25px;
     gap: 15px;
-      div {
-        .moreResultTitle {
-          @include underLine;
-          margin-top: 9px;
-          color: $blueColor;
-          font-weight: 500;
-          font-size: 20px;
-        }
-        .moreResultDesc{
-          font-size: 14px;
-          font-weight: 300;
-        }
+    @media screen and (max-width: 650px){
+      margin-left: 0px;
+    };
+
+    .more-result-title {
+      @include underLine;
+      text-decoration: none;
+      margin-top: 9px;
+      color: $blueColor;
+      font-weight: 500;
+      font-size: 20px;
+      @media screen and (max-width: 650px){
+        font-size: 19px;
       }
-      div.timer {
+    }
+
+    .more-result-desc{
+      font-size: 14px;
+      font-weight: 300;
+      @media screen and (max-width: 650px){
+        font-size: 12px;
+      }
+    }
+
+      .timer {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         @include flex-center;
         border: 1px solid $borderColor;
+        @media screen and (max-width: 650px){
+          display: none;
+        }
 
         svg{
-          color: blue;
+          color: #0000ff;
         }
       }
 
@@ -87,92 +126,41 @@
         font-size: 14px;
         color: $blueColor;
         margin-bottom: 10px;
+        text-decoration: none;
         @include underLine;
       }
   }
 }
 
-.relatedSearch {
+.related-search {
   margin-bottom: 20px;
-  .searchTitle {
+  .search-title {
     @include flex;
 
-    h1 {
+    .related-search-heading {
       font-size: 22px;
       font-weight: 400;
       color: black;
     }
 
-    .threeDot {
+    .three-dot {
       margin-left: 14px;
       font-size: 14px;
     }
   }
-  .searchesGrid {
+  .searches-grid {
     width: 90%;
     display: grid;
       grid-template-columns: repeat(2, 1fr);
       row-gap: 12px;
       column-gap: 25px;
       margin-top: 12px;
+      @media screen and (max-width:1300px){
+        width: 100%;
+      }
+      @media screen and (max-width: 650px){
+        row-gap: 9px;
+        column-gap: 10px;
+      }
   }
 }
-
-@media screen and (max-width:1300px) {
-   .relatedSearch {
-    .searchesGrid {
-      width: 100%;
-    }
-   }
-}
-
-
-@media screen and (max-width: 650px) {
-  .result {
-    margin-bottom: 18px;
-
-    .moreResults {
-      margin-left: 0px;
-  
-      div {
-        .moreResultTitle {
-          font-size: 19px;
-        }
-  
-        .moreResultDesc {
-          font-size: 12px;
-        }
-      }
-  
-      div.timer {
-        display: none;
-      }
-    }
-
-    .result-desc {
-      .row {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 18px;
-        overflow-x: auto;
-        margin-top: 12px;
-      }
-      
-      .result-desc-title {
-        font-size: 19px;
-      }
-      
-      .result-desc-desc {
-        font-size: 12px;
-      }
-    }
-  }
-  
-  .relatedSearch {
-    .searchesGrid {
-      row-gap: 9px;
-      column-gap: 10px;
-    }
-  } 
-}
-

@@ -5,6 +5,7 @@ import "./Results.scss";
 import { RxCountdownTimer } from "react-icons/rx";
 import DescBox from "../DescBox/DescBox";
 import Search from "./Search/Search";
+import { Link } from "react-router-dom";
 
 export default function () {
   const data = [
@@ -196,22 +197,24 @@ export default function () {
               <div className="result-title">
                 {val.siteImage && (
                   <div className="img-div">
-                    <img src={val.siteImage} alt="" />
+                    <img src={val.siteImage} className="site-img" alt="" />
                   </div>
                 )}
                 <div className="site-name">
                   <p>{val.siteName}</p>
                   {val.siteLink && (
-                    <p>
+                    <Link to="/" className="site-link">
                       {val.siteLink}
-                      <PiDotsThreeOutlineVerticalFill className="threeDot" />
-                    </p>
+                      <PiDotsThreeOutlineVerticalFill className="site-link-three-dot" />
+                    </Link>
                   )}
                 </div>
               </div>
 
               <div className="result-desc">
-                <h2 className="result-desc-title">{val.siteTitle}</h2>
+                <Link to="/search" className="result-desc-title">
+                  {val.siteTitle}
+                </Link>
                 {val.siteDescBox && (
                   <div className="desc-row-container">
                     <div className="row">
@@ -237,23 +240,28 @@ export default function () {
                 <>
                   {val.moreResults.map((result, index) => {
                     return (
-                      <div className="moreResults" key={index}>
+                      <div className="more-results" key={index}>
                         <div>
-                          <h2 className="moreResultTitle">
+                          <Link
+                            to="/search"
+                            className="more-result-title"
+                          >
                             {result.moreResultsTitle}
-                          </h2>
-                          <p className="moreResultDesc">
+                          </Link>
+                          <p className="more-result-desc">
                             {result.moreResultsDesc}
                           </p>
 
                           {result.more ? (
-                            <p className="more">{result.more}</p>
+                            <Link to="/" className="more">
+                              {result.more}
+                            </Link>
                           ) : (
                             <></>
                           )}
                         </div>
                         {result.timer ? (
-                          <div className="timer">{result.timer} </div>
+                          <div className="timer">{result.timer}</div>
                         ) : (
                           ""
                         )}
@@ -266,12 +274,12 @@ export default function () {
               )}
             </div>
             {val.relatedSearch && (
-              <div className="relatedSearch">
-                <div className="searchTitle">
-                  <h1>Related searches</h1>{" "}
-                  <PiDotsThreeOutlineVerticalFill className="threeDot" />
+              <div className="related-search">
+                <div className="search-title">
+                  <h1 className="related-search-heading">Related searches</h1>
+                  <PiDotsThreeOutlineVerticalFill className="three-dot" />
                 </div>
-                <div className="searchesGrid">
+                <div className="searches-grid">
                   {val.relatedSearch.map((item, i) => {
                     return <Search key={i} searchItem={item.search} />;
                   })}

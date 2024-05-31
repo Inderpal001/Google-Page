@@ -1,0 +1,70 @@
+@import "../../global";
+
+.home-navbar {
+  @include flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 15px;
+  height: 8%;
+  color: $navFontColor;
+  font-size: 14px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  .h-nav-link-continer {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+    @media screen and (max-width: 768px) {
+      gap: 10px;
+      align-items: center;
+    }
+
+    .h-nav-links {
+      @include flex-center;
+      cursor: pointer;
+      text-decoration: none;
+      color: $navFontColor;
+    }
+
+    .home-nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .home-nav-Circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      @include flex-center;
+      @media screen and (max-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
+
+      &:hover {
+        background-color: $navHoverColor;
+      }
+
+      .home-nav-icon {
+        font-size: 18px;
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .home-nav-Profile {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: purple;
+      color: white;
+      @media screen and (max-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
