@@ -2,10 +2,10 @@
 
 .home-footer {
   width: 100%;
-  @include flex;
+  @include flex-x-center;
   flex-direction: column;
-  background: $footerColor;
-  color: $footerFontColor;
+  background: $lightGray;
+  color: $secondaryFontColor;
   font-size: 15px;
   position: fixed;
   bottom: 0;
@@ -18,19 +18,19 @@
   .upper-footer {
     width: 100%;
     padding: 15px 20px;
-    border-bottom: 1px solid rgb(195, 193, 193);
+    border-bottom: 1px solid #c3c1c1;
     @media screen and (max-width: 768px) {
       padding: 8px 10px;
     }
     .footer-links {
       text-decoration: none;
-      color: $footerFontColor;
+      color: $secondaryFontColor;
     }
   }
 
   .lower-footer {
     width: 100%;
-    @include flex;
+    @include flex-x-center;
     padding: 15px 20px;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
@@ -42,7 +42,7 @@
 
     .left-lower-footer,
     .right-lower-footer {
-      @include flex;
+      @include flex-x-center;
       gap: 20px;
       @media screen and (max-width: 768px) {
         width: 100%;
@@ -51,7 +51,7 @@
 
       .footer-links {
         text-decoration: none;
-        color: $footerFontColor;
+        color: $secondaryFontColor;
       }
     }
   }

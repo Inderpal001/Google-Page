@@ -1,7 +1,7 @@
 import React from "react";
 import "./Main.scss";
 import Results from "./Results/Results";
-import g from "../../assets/g.png";
+import g_icon from "../../assets/g-icon.png";
 import { IoEarthSharp } from "react-icons/io5";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
@@ -27,7 +27,7 @@ export default function Main() {
               <p className="info-title-company">IT Corporation <BsThreeDotsVertical /></p> 
             </div>
             <div>
-              <img src={g} alt="" width={50} />
+              <img src={g_icon} alt="" width={50} />
             </div>
           </div>
 

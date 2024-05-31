@@ -1,6 +1,6 @@
-import React from 'react'
-import SearchPage from './Pages/SearchPage';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import React from "react"
+import SearchPage from "./Pages/SearchPage";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 
 export default function App() {

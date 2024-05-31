@@ -1,7 +1,7 @@
 @import "../../../global";
 
 .desc-box {
-    border: 1px solid $borderColor;
+    border: 1px solid $whiteGrayColor;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +21,7 @@
             padding-left: 12px;
             padding-bottom: 10px;
             .time{
-                color: $fontColor;
+                color: $PrimaryFontColor;
             }
         }
     }

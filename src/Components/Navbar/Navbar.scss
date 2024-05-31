@@ -3,14 +3,14 @@
 .navbar {
   width: 100%;
   padding: 1rem 3rem;
-  color: $fontColor;
-  border-bottom: 1px solid $borderColor;
+  color: $PrimaryFontColor;
+  border-bottom: 1px solid $whiteGrayColor;
   @media screen and (max-width: 650px) {
     padding: 13px 20px 5px 20px;
   }
 
   .upper-Navbar {
-    @include flex;
+    @include flex-x-center;
     justify-content: space-between;
     @media screen and (max-width: 650px) {
       display: block;
@@ -18,7 +18,7 @@
     }
 
     .left-upper-nav {
-      @include flex;
+      @include flex-x-center;
       gap: 30px;
       @media screen and (max-width: 760px) {
         gap: 20px;
@@ -39,7 +39,7 @@
       }
 
       .search-input-div {
-        @include flex;
+        @include flex-x-center;
         gap: 10px;
         width: 43rem;
         border-radius: 40px;
@@ -108,7 +108,7 @@
     }
 
     .right-upper-nav {
-      @include flex;
+      @include flex-x-center;
       gap: 20px;
       @media screen and (max-width: 800px) {
         display: none;
@@ -122,15 +122,15 @@
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        background-color: purple;
-        color: white;
+        background-color: #800080;
+        color: #fff;
         @include flex-center;
       }
     }
   }
 
   .lower-Navbar {
-    @include flex;
+    @include flex-x-center;
     gap: 4rem;
     max-width: 74%;
     justify-content: space-between;
@@ -149,7 +149,7 @@
     }
 
     .flex {
-      @include flex;
+      @include flex-x-center;
       margin-top: 8px;
       margin-left: 130px;
       gap: 7px;
@@ -162,11 +162,11 @@
 
       .navList {
         text-decoration: none;
-        border: 1px solid rgb(212, 212, 212);
+        border: 1px solid #d4d4d4;
         min-width: 38px;
         border-radius: 22px;
         padding: 5px 10px;
-        color: rgb(62, 62, 62);
+        color: #3e3e3e;
         font-size: 14px;
         min-width: 70px;
         text-align: center;
@@ -188,7 +188,7 @@
         .selection {
           border: none;
           font-size: 14px;
-          color: $fontColor;
+          color: $PrimaryFontColor;
           padding: 8px 0px;
         }
 

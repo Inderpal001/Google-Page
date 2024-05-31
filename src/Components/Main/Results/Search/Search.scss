@@ -1,7 +1,7 @@
 @import "../../../../global";
 
 .search {
-  @include flex;
+  @include flex-x-center;
   background-color: #f1f3f4;
   border-radius: 30px;
   gap: 15px;
@@ -20,7 +20,7 @@
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    color: black;
+    color: #000;
     @media screen and (max-width: 760px) {
       font-size: 12px;
     }

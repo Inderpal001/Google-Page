@@ -7,7 +7,7 @@
   };
 
   .result-title {
-    @include flex;
+    @include flex-x-center;
 
     .img-div {
       @include flex-center;
@@ -27,7 +27,7 @@
 
       .site-link{
         text-decoration: none;
-        color: $fontColor;
+        color: $PrimaryFontColor;
       }
 
       .site-link-three-dot {
@@ -41,7 +41,7 @@
       text-decoration: none;
       @include underLine;
       margin-top: 9px;
-      color: $blueColor;
+      color: $purpleColor;
       font-weight: 500;
       font-size: 20px;
       @media screen and (max-width: 650px){
@@ -50,17 +50,11 @@
     }
 
     .row {
-     display: flex;
+    @include flex;
      margin-top: 12px;
      gap: 18px;
      overflow-x: auto;
-     @media screen and (max-width: 650px){
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 18px;
-      overflow-x: auto;
-      margin-top: 12px;
-     }
+     flex-wrap: nowrap;
     }
 
     .result-desc-desc {
@@ -74,12 +68,12 @@
     .links {
       font-size: 14px;
       font-weight: 500;
-      color: $blueColor;
+      color: $purpleColor;
     }
   }
 
   .more-results {
-    @include flex;
+    @include flex-x-center;
     margin-top: 5px;
     margin-left: 25px;
     gap: 15px;
@@ -91,7 +85,7 @@
       @include underLine;
       text-decoration: none;
       margin-top: 9px;
-      color: $blueColor;
+      color: $purpleColor;
       font-weight: 500;
       font-size: 20px;
       @media screen and (max-width: 650px){
@@ -112,19 +106,15 @@
         height: 40px;
         border-radius: 50%;
         @include flex-center;
-        border: 1px solid $borderColor;
+        border: 1px solid $whiteGrayColor;
         @media screen and (max-width: 650px){
           display: none;
-        }
-
-        svg{
-          color: #0000ff;
         }
       }
 
       .more {
         font-size: 14px;
-        color: $blueColor;
+        color: $purpleColor;
         margin-bottom: 10px;
         text-decoration: none;
         @include underLine;
@@ -135,12 +125,12 @@
 .related-search {
   margin-bottom: 20px;
   .search-title {
-    @include flex;
+    @include flex-x-center;
 
     .related-search-heading {
       font-size: 22px;
       font-weight: 400;
-      color: black;
+      color: #000;
     }
 
     .three-dot {

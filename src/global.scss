@@ -1,11 +1,11 @@
-$blueColor: #681da8;
-$fontColor :rgb(77, 81, 86);
-$borderColor :#ecedef;
+$purpleColor: #681da8;
+$PrimaryFontColor :#4D5156;
+$secondaryFontColor : #141414;
+$whiteGrayColor :#ecedef;
+$darkGray: #414040cc;
+$darkSlateGray: #3c404314;
+$lightGray:#efeff1;
 $fontFamily: arial, sans-serif;
-$navFontColor: rgba(65, 64, 64, 0.8);
-$navHoverColor: rgba(60, 64, 67, 0.08);
-$footerColor:#efeff1;
-$footerFontColor : rgb(20, 20, 20);
 
 *{
   margin: 0;
@@ -15,7 +15,11 @@ $footerFontColor : rgb(20, 20, 20);
   line-height: 1.58;
 }
 
-@mixin flex {
+@mixin flex{
+  display: flex;
+}
+
+@mixin flex-x-center {
   display: flex;
   align-items: center;
 }
@@ -26,12 +30,12 @@ $footerFontColor : rgb(20, 20, 20);
   align-items: center;
 }
 
-::-webkit-scrollbar {
-  visibility: hidden;
-}
-
 @mixin underLine {
   &:hover {
     text-decoration: underline;
   }
+}
+
+::-webkit-scrollbar {
+  visibility: hidden;
 }

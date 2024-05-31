@@ -1,5 +1,5 @@
 import React from "react";
-import g from "../../../assets/g.png";
+import g_icon from "../../../assets/g-icon.png";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import "./Results.scss";
 import { RxCountdownTimer } from "react-icons/rx";
@@ -13,7 +13,7 @@ export default function () {
       siteName: "Google",
       siteLink: "https://www.google.com",
       siteTitle: "Google",
-      siteImage: g,
+      siteImage: g_icon,
       siteDesc:
         "Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking ...",
       moreResults: [
@@ -21,13 +21,13 @@ export default function () {
           moreResultsTitle: "Google Fonts",
           moreResultsDesc:
             "Roboto · Jacquard 12 · Danfo · Noto Sans Elymaic · Open ..",
-          timer: <RxCountdownTimer />,
+          timer: <RxCountdownTimer color="#0000ff"/>,
         },
         {
           moreResultsTitle: "API Library",
           moreResultsDesc:
             "Spend smart and procure faster via online discovery, purchasing ...",
-          timer: <RxCountdownTimer />,
+          timer: <RxCountdownTimer color="#0000ff"/>,
         },
         {
           moreResultsTitle: "Account",
@@ -52,7 +52,7 @@ export default function () {
     {
       siteName: "About Google",
       siteLink: "https://www.about.google > intl > ALL_in",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "About Google, Our Culture & Company News",
       siteDesc:
         "Stay up to date with Google company news and products. Discover stories about our culture, philosophy, and how Google technology is impacting others.",
@@ -60,7 +60,7 @@ export default function () {
     {
       siteName: "Google Blog",
       siteLink: "https://blog.google",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "The Keyword | Google Product and Technology News and ...",
       siteDesc:
         "Get the latest news and stories about Google products, technology and innovation on the Keyword, Google's official blog.",
@@ -68,7 +68,7 @@ export default function () {
     {
       siteName: "Google",
       siteLink: "https://www.google.com > account > about",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google Account",
       siteDesc:
         "In your Google Account, you can see and manage your info, activity, security options, and privacy preferences to make Google work better for you.",
@@ -76,7 +76,7 @@ export default function () {
     {
       siteName: "Google Cloud",
       siteLink: "https://cloud.google.com",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google Cloud: Cloud Computing Services",
       siteDesc:
         "Meet your business challenges head on with cloud computing services from Google, including data management, hybrid & multi-cloud, and AI & ML.",
@@ -84,7 +84,7 @@ export default function () {
     {
       siteName: "Wikipedia",
       siteLink: "https://en.wikipedia.org > wiki > google",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google",
       siteDesc:
         "Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, ...",
@@ -94,7 +94,7 @@ export default function () {
     {
       siteName: "Google Trends",
       siteLink: "https://trends.google.com > trends",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google Trends",
       siteDesc:
         "See how Google Trends is being used across the world, by newsrooms, charities, and more. Trends Time Capsule. What was trending in your special year?",
@@ -102,7 +102,7 @@ export default function () {
     {
       siteName: "X (Twitter)",
       siteLink: "https://twitter.com/google",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google (@Google) · X",
       siteDescBox: [
         {
@@ -129,7 +129,7 @@ export default function () {
     {
       siteName: "Google",
       siteLink: "https://marketingplatform.google.com > about > analytics",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Analytics Tools & Solutions for Your Business",
       siteDesc:
         "Free and easy-to-use solutions for businesses of every size. ... A single platform that integrates your advertising and analytics, so you can act on customer ...",
@@ -137,7 +137,7 @@ export default function () {
     {
       siteName: "Google Images",
       siteLink: "https://images.google.com",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google",
       siteDesc:
         "Google Images. The most comprehensive image search on the web.",
@@ -145,7 +145,7 @@ export default function () {
     {
       siteName: "Google",
       siteLink: "https://search.google.com > about",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Google Search Console Tools",
       siteDesc:
         "Search Console tools and reports help you measure your site's Search traffic and performance, fix issues, and make your site shine in Google Search results.",
@@ -153,7 +153,7 @@ export default function () {
     {
       siteName: "Google Play",
       siteLink: "https://pay.google.com > intl > about",
-      siteImage: g,
+      siteImage: g_icon,
       siteTitle: "Money made simple, by Google",
       siteDesc:
         "Built for India with all the features and rewards you love, plus much more. Google Pay is the simplest way to send money home to your family, recharge your ...",
@@ -228,7 +228,7 @@ export default function () {
                             siteDescBoxTime={desc.siteDescBoxTime}
                           />
                         );
-                      })}{" "}
+                      })}
                     </div>
                   </div>
                 )}

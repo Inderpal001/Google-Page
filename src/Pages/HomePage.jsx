@@ -1,10 +1,10 @@
-import React,{useRef} from 'react';
+import React,{useRef} from "react";
 import { IoIosSearch } from "react-icons/io";
-import HomeNavbar from '../Components/HomeNavbar/HomeNavbar';
-import HomeShortcut from '../Components/HomeShortcut/HomeShortcut';
-import HomeFooter from '../Components/HomeFooter/HomeFooter';
+import HomeNavbar from "../Components/HomeNavbar/HomeNavbar";
+import HomeShortcut from "../Components/HomeShortcut/HomeShortcut";
+import HomeFooter from "../Components/HomeFooter/HomeFooter";
 import "./HomePage.scss";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
 
@@ -18,17 +18,17 @@ export default function App() {
    }
 
   return (
-    <div className='home-page'>
+    <div className="home-page">
         <HomeNavbar/>
 
         <div className="content-div">
-            <img src="https://t3.ftcdn.net/jpg/03/99/98/60/240_F_399986042_9iSLYUNyDv8npaKP31xsIpDVFjfqGLDF.jpg" alt="" className='home-logo'/>
+            <img src="https://t3.ftcdn.net/jpg/03/99/98/60/240_F_399986042_9iSLYUNyDv8npaKP31xsIpDVFjfqGLDF.jpg" alt="" className="home-logo"/>
 
             <form onSubmit={handleNavigate} className="home-search-input">
                <IoIosSearch fontSize={19}/>
-               <input type="text" className='home-input' ref={inputRef} placeholder='Search Google or type a URL' />
-               <img src="https://t3.ftcdn.net/jpg/05/74/88/56/240_F_574885641_mmYDC6Ffw1dxvXg9zEldgPqdZjWn2Sky.jpg" alt="" className='home-input-img'/>
-               <img src="https://t3.ftcdn.net/jpg/05/74/88/56/240_F_574885689_LSqUK9G7fJaHidKs0uVyEvgYg0Oxvzg5.jpg" alt="" className='home-input-img'/>
+               <input type="text" className="home-input" ref={inputRef} placeholder="Search Google or type a URL" />
+               <img src="https://t3.ftcdn.net/jpg/05/74/88/56/240_F_574885641_mmYDC6Ffw1dxvXg9zEldgPqdZjWn2Sky.jpg" alt="" className="home-input-img"/>
+               <img src="https://t3.ftcdn.net/jpg/05/74/88/56/240_F_574885689_LSqUK9G7fJaHidKs0uVyEvgYg0Oxvzg5.jpg" alt="" className="home-input-img"/>
             </form>
 
            <div className="grid">

@@ -4,7 +4,7 @@
     width: 80%;
     margin: auto;
     padding: 1.1rem 2.2rem;
-    display: flex;
+    @include flex;
     @media screen and (max-width:1025px){
         width:95%;
         flex-direction: column;
@@ -17,7 +17,7 @@
 
     .left-main {
         flex: 1;
-        color: $fontColor;
+        color: $PrimaryFontColor;
     }
     .right-main {
         flex: 1;
@@ -28,14 +28,14 @@
         .info {
             margin-left: 40px;
             max-width: 400px;
-            border: 1px solid $borderColor;
+            border: 1px solid $whiteGrayColor;
             border-radius: 8px;
 
             .info-title {
-                @include flex;
+                @include flex-x-center;
                 justify-content: space-between;
                 padding: 7px 15px;
-                border-bottom: 1px solid $borderColor;
+                border-bottom: 1px solid $whiteGrayColor;
 
                 .info-title-name {
                     font-weight: 500;
@@ -44,22 +44,22 @@
 
                 .info-title-company {
                     font-size: 13px;
-                    color: $fontColor;
+                    color: $PrimaryFontColor;
                 }
             }
 
             .info-site {
                 padding: 8px 13px;
-                @include flex;
-                border-bottom: 1px solid $borderColor;
+                @include flex-x-center;
+                border-bottom: 1px solid $whiteGrayColor;
                 gap: 25px;
 
                 .earth-svg {
-                    color: $fontColor;
+                    color: $PrimaryFontColor;
                 }
 
                 .google {
-                    color: $blueColor;
+                    color: $purpleColor;
                     text-decoration: none;
                     font-size: 14px;
                     @include underLine;
@@ -69,10 +69,10 @@
             .info-desc {
                 .info-desc-sm {
                     padding: 10px 15px;
-                    display: flex;
+                    @include flex;
                     flex-direction: column;
                     gap:5px;
-                    color: $fontColor;
+                    color: $PrimaryFontColor;
                     position: relative;
                     margin-bottom: 20px;
 
@@ -80,7 +80,7 @@
                         font-size: 15px;
 
                         .details {
-                            color: $blueColor;
+                            color: $purpleColor;
                             text-decoration: none;
                             @include underLine;
                         }
@@ -91,11 +91,11 @@
                         right: 10px;
                         bottom: -20px;
                         font-size: 12px;
-                        color: $fontColor;
+                        color: $PrimaryFontColor;
 
                         .disclaimer-name{
                             text-decoration: none;
-                            color: $fontColor;
+                            color: $PrimaryFontColor;
                         }
                     }
                 }
@@ -110,7 +110,7 @@
 
                     .sites-info {
                         margin-top: 8px;
-                        display: flex;
+                        @include flex;
                         flex-direction: row;
                         justify-content: space-evenly;
 
@@ -128,7 +128,7 @@
     
                            .site-names {
                             font-size: 14px;
-                            color: $blueColor;
+                            color: $purpleColor;
                             text-decoration: none;
                            }
                         }
@@ -139,9 +139,9 @@
                     position: relative;
 
                     .view-more {
-                        @include flex;
+                        @include flex-x-center;
                         justify-content: space-between;
-                        color: $fontColor;
+                        color: $PrimaryFontColor;
                         font-size: 14px;
 
                         .site-searches{
@@ -151,7 +151,7 @@
 
                         .view-more-sites{
                             text-decoration: none;
-                            color: $fontColor;
+                            color: $PrimaryFontColor;
                         }
                     }
 
@@ -160,7 +160,7 @@
                         right: 10px;
                         bottom: -25px;
                         font-size: 12px;
-                        color: $fontColor;
+                        color: $PrimaryFontColor;
                     }
                 }
             }

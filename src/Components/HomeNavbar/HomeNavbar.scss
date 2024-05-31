@@ -1,20 +1,20 @@
 @import "../../global";
 
 .home-navbar {
-  @include flex;
+  @include flex-x-center;
   width: 100%;
   align-items: center;
   justify-content: flex-end;
   padding: 20px 15px;
   height: 8%;
-  color: $navFontColor;
+  color: $darkGray;
   font-size: 14px;
   @media screen and (max-width: 768px) {
     font-size: 12px;
   }
 
   .h-nav-link-continer {
-    display: flex;
+    @include flex;
     list-style: none;
     gap: 18px;
     @media screen and (max-width: 768px) {
@@ -26,7 +26,7 @@
       @include flex-center;
       cursor: pointer;
       text-decoration: none;
-      color: $navFontColor;
+      color: $darkGray;
     }
 
     .home-nav-link:hover {
@@ -44,7 +44,7 @@
       }
 
       &:hover {
-        background-color: $navHoverColor;
+        background-color: $darkSlateGray;
       }
 
       .home-nav-icon {
@@ -59,8 +59,8 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background-color: purple;
-      color: white;
+      background-color: #800080;
+      color: #fff;
       @media screen and (max-width: 768px) {
         width: 25px;
         height: 25px;
