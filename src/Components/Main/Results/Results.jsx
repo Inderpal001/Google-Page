@@ -1,4 +1,3 @@
-import React from "react";
 import g_icon from "../../../assets/g-icon.png";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 import "./Results.scss";
@@ -7,7 +6,7 @@ import DescBox from "../DescBox/DescBox";
 import Search from "./Search/Search";
 import { Link } from "react-router-dom";
 
-export default function () {
+export default function Results() {
   const data = [
     {
       siteName: "Google",
@@ -21,13 +20,13 @@ export default function () {
           moreResultsTitle: "Google Fonts",
           moreResultsDesc:
             "Roboto · Jacquard 12 · Danfo · Noto Sans Elymaic · Open ..",
-          timer: <RxCountdownTimer color="#0000ff"/>,
+          timer: <RxCountdownTimer color="#0000ff" />,
         },
         {
           moreResultsTitle: "API Library",
           moreResultsDesc:
             "Spend smart and procure faster via online discovery, purchasing ...",
-          timer: <RxCountdownTimer color="#0000ff"/>,
+          timer: <RxCountdownTimer color="#0000ff" />,
         },
         {
           moreResultsTitle: "Account",
@@ -242,10 +241,7 @@ export default function () {
                     return (
                       <div className="more-results" key={index}>
                         <div>
-                          <Link
-                            to="/search"
-                            className="more-result-title"
-                          >
+                          <Link to="/search" className="more-result-title">
                             {result.moreResultsTitle}
                           </Link>
                           <p className="more-result-desc">

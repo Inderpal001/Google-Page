@@ -1,4 +1,3 @@
-import React from "react";
 import "./Main.scss";
 import Results from "./Results/Results";
 import g_icon from "../../assets/g-icon.png";

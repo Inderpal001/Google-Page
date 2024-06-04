@@ -1,4 +1,4 @@
-import React,{useRef} from "react";
+import {useRef} from "react";
 import { IoIosSearch } from "react-icons/io";
 import HomeNavbar from "../Components/HomeNavbar/HomeNavbar";
 import HomeShortcut from "../Components/HomeShortcut/HomeShortcut";

@@ -1,5 +1,5 @@
-import React from "react";
 import "./DescBox.scss";
+import PropTypes from 'prop-types';
 
 export default function DescBox({siteDescBoxText,siteDescBoxImage,siteDescBoxTime}) {
   return (
@@ -16,3 +16,9 @@ export default function DescBox({siteDescBoxText,siteDescBoxImage,siteDescBoxTim
     </div>
   )
 }
+
+DescBox.propTypes = {
+  siteDescBoxText: PropTypes.string.isRequired,
+  siteDescBoxImage: PropTypes.string.isRequired,
+  siteDescBoxTime: PropTypes.string.isRequired,
+};

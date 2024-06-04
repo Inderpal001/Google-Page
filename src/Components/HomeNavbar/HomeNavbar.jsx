@@ -1,4 +1,3 @@
-import React from "react";
 import { ImLab } from "react-icons/im";
 import { IoApps } from "react-icons/io5";
 import "./HomeNavbar.scss";

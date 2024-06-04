@@ -1,4 +1,3 @@
-import React from "react";
 import { IoApps } from "react-icons/io5";
 import "./Navbar.scss"
 import google from "../../assets/google.png"
